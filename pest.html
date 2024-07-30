@@ -1,0 +1,467 @@
+<html>
+<head>
+
+<h1 style="background-color:#c4e5f5;" align="center" height="5%"width="90%">Insecticide</h1>
+
+</head>
+<br>
+<br>
+<style>
+.carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+</style>
+<body>
+<div>
+  <div class="carousel">
+    <ul class="slides">
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://cultree.in/cdn/shop/articles/1668243359007003-0.jpg?v=1694580664">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-3" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-2" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://images.theconversation.com/files/290201/original/file-20190829-106517-191ipmu.jpg?ixlib=rb-4.1.0&rect=182%2C85%2C3606%2C2053&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-1" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-3" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://www.cropscience.bayer.ca/products/~/media/B4EA583F456C47ABB90069B0EB8D1847.ashx">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-2" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-1" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+      </div>
+    </ul>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<style>
+ :root {
+  --red: #ef233c;
+  --darkred: #c00424;
+  --platinum: #e5e5e5;
+  --black: #2b2d42;
+  --white: #fff;
+  --thumb: #edf2f4;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 16px / 24px "Rubik", sans-serif;
+  color: var(--black);
+  background: var(--platinum);
+  margin: 50px 0;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 1em;
+ 
+}
+
+.cards {
+  display: flex;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card:hover {
+  color: var(--white);
+  background: var(--red);
+}
+
+.card .card-title {
+  font-size: 20px;
+}
+
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+
+.cards::-webkit-scrollbar {
+  height: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  z-index: 1;
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+</style>
+<div class="container">
+  <h1 align="center">INSECTICIDE SHOP IS DOWN HERE!!!!!</h1><br>
+  <ul class="cards">
+    <li class="card">
+      <div>
+	     <h3 class="card-title" align="center">Terminor</h3>
+ 
+        <div class="card-content">
+		 <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/395878616/MM/LQ/TH/189673395/uttam-keetneshak-insecticides-500x500.jpg" alt="Denim Jeans" style="width:120%">
+        <br><br> <p>It controls sucking, chewing, biting and boring insects in various crops. It is also used for the management of soil insects because of longer residual action. Its technical chlorpyrifos is used from last several decades but no resistance is reported and has good compatibility with most commonly used pesticides.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+         <a href="https://www.indiamart.com/proddetail/terminor-insecticide-for-termites-21429498255.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Monocrop</h3>
+		
+        <div class="card-content">
+		 <img src="https://3.imimg.com/data3/VK/JN/MY-9096776/aa-250x250.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <br> <br><br><br> <p>Monocrotophos appears as colorless crystals with a mild ester odor, commercial product is a reddish-brown solid. Used as a fast acting insecticide with both systemic and contact action against a wide range of pests on cotton, sugar cane, tobacco, potatoes, peanuts, tomatoes, and ornamentals.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+	    <a href="https://dir.indiamart.com/search.mp?ss=monocrop+insecticide&src=as-context%7Ckwd%3Dmonocrop+%7Cpos%3D2%7Ccat%3D203%7Cmcat%3D3179%7Ckwd_len%3D9%7Ckwd_cnt%3D2&prdsrc=1&com-cf=nl&res=RC5&stype=attr=1|attrS&Mspl=0&qry_typ=P&City=chennai&cq=chennai" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Aseta</h3>
+		
+        <div class="card-content">
+		 <img src="https://5.imimg.com/data5/SELLER/Default/2022/4/VT/JY/GN/49453218/aseta-acetamiprid-insecticides-500x500.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <br> <br> <br> <br> <br> <br> <br><br><p>Acetamiprid 20% SP is commonly used in agriculture and horticulture to control a variety of insect pests, including aphids, thrips, whiteflies, leafhoppers, and some beetles. It can be applied as a foliar spray or used as a soil drench, depending on the target pest and the crop being treated.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+  <a href="https://www.indiamart.com/proddetail/aseta-acetamiprid-insecticides-24582551573.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Malathion</h3>
+	
+        <div class="card-content">
+		 <img src="https://agribegri.com/productimage/f6bae35e0d5c03b8f57377efe9c954dc-02-27-23-15-36-13.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br><br><br><br> <br> <br> <br> <br><br> <p>Malathion is a man-made organophosphate insecticide that is commonly used to control mosquitoes and a variety of insects that attack fruits, vegetables, landscaping plants, and shrubs. It can also be found in other pesticide products used indoors and on pets to control ticks and insects, such as fleas and ants.</p>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+          <a href="https://www.indiamart.com/proddetail/insecticides-malathion-1520980791.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<br>
+	<br>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Egonis</h3>
+			
+        <div class="card-content">
+		 <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/SN/NK/HT/1470643/pyriproxyfen-10-bifenthrin-10-w-w-ec.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <br> <br> <br> <br> <br> <p>It controls all three stages of whitefly. It prevents hatching of eggs, inhibits metamorphosis of Nymph to Adult and causes sterility in adults. Simultaneously LEONIS gives quick knockdown effect on adult white fly by its contact & stomach action.</p>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+         <a href="https://www.indiamart.com/proddetail/pyriproxyfen-10-bifenthrin-10-w-w-ec-27474663791.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+    <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Agri Pride</h3>
+		  	
+          <div class="card-content">
+		  <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/LY/OD/DA/3424116/agri-pride-250x250.png" alt="Denim Jeans" style="width:120%">
+		  <br> <br> <br> <br> <br><br> <br> <br><br> <br> <p> Pride is a systemic insecticide containing 200g/L of the active Imidacloprid. Pride is specifically registered for the selective control of African Black Beetle, Argentinian Scarab, Billbug (larvae) and Pruinose Scarab in turf situations and a wide range of sucking pests in ornamental plant situations.</p>
+ </div>
+        </div>
+        
+        <div class="card-link-wrapper">
+        <a href="https://www.indiamart.com/proddetail/agri-pride-insecticide-2849579259788.html" class="card-link"><button>Visit</button></a>
+        </div>
+      </li>
+    
+      <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Glyphos</h3>
+		  
+          <div class="card-content">
+           <img src="https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/ecn/ecn00032/l/8.jpg" alt="Denim Jeans" style="width:120%">
+          <br> <br> <br> <br> <br> <br> <br> <br><br> <br> <br> <br> <p>Glyphosate is a widely used herbicide that can kill certain weeds and grasses. Glyphosate works by blocking an enzyme essential for plant growth. The product is used primarily in agriculture, but also in forestry and lawn and garden care.</p>
+		  </div>
+        </div>
+        <br>
+        <div class="card-link-wrapper">
+           <a href="https://www.indiamart.com/proddetail/insecticides-24761709691.html" class="card-link"><button>Visit</button></a>
+        </div>
+      </li>
+	  <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Tolfen</h3>
+		  
+          <div class="card-content">
+           <img src="https://www.heranba.co.in/wp-content/uploads/2022/07/Tolfin-2-1000x1000.jpg" alt="Denim Jeans" style="width:120%">
+          <br> <br><br><br><br><br><br><br><br> <br> <br> <br> <br><br> <p>Used to control Insects, Mites and a Fungus. Dosage : 1 Litre / hectare in Cabbage & Ekra against Diamond Backmoth, Aphids, Jassids, Throips & White Fly.</p>
+		  </div>
+        </div>
+        <br>
+        <div class="card-link-wrapper">
+           <a href="https://www.indiamart.com/proddetail/tolfenpyrad-15-ec-tolfen-26902155588.html" class="card-link"><button>Visit</button></a>
+        </div>
+      </li>
+
+	
+</body>
+
+
+
+</html>

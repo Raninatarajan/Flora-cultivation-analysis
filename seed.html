@@ -1,0 +1,455 @@
+<html>
+<head>
+
+<h1 style="background-color:#c4e5f5;" align="center" height="5%"width="90%">SEED EXCHANGE MARKET</h1>
+
+</head>
+<br>
+<br>
+<style>
+.carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+</style>
+<body>
+<div>
+  <div class="carousel">
+    <ul class="slides">
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://www.garden.eco/wp-content/uploads/2017/11/plant-pumpkin-seeds.jpg.jpg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-3" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-2" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://foodgardening.mequoda.com/wp-content/uploads/2021/05/Sowing-wheat-seeds.jpg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-1" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-3" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="https://www.gardeningknowhow.com/wp-content/uploads/2020/07/seed-planting.jpg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-2" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-1" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+      </div>
+    </ul>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<style>
+ :root {
+  --red: #ef233c;
+  --darkred: #c00424;
+  --platinum: #e5e5e5;
+  --black: #2b2d42;
+  --white: #fff;
+  --thumb: #edf2f4;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 16px / 24px "Rubik", sans-serif;
+  color: var(--black);
+  background: var(--platinum);
+  margin: 50px 0;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 1em;
+}
+
+.cards {
+  display: flex;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.card:not(:last-child) {
+  margin-right: 10px;
+}
+
+.card:hover {
+  color: var(--white);
+  background: var(--red);
+}
+
+.card .card-title {
+  font-size: 20px;
+}
+
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+
+.cards::-webkit-scrollbar {
+  height: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  z-index: 1;
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 4px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+</style>
+<div class="container">
+  <h1 align="center">SEED SHOP IS DOWN HERE!!!!!</h1><br>
+  <ul class="cards">
+    <li class="card">
+      <div>
+        <h3 class="card-title" align="center">Paddy seed</h3>
+        <div class="card-content">
+		 <img src="https://araliyarice.com/wp-content/uploads/2017/12/good-seeds.jpg" alt="Denim Jeans" style="width:120%">
+        <br><br>  <p>Paddy is an essential food crop for billions of people in India.The seed germination process is a key phase of the plant life cycle. Quality seed is important to increase production.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="https://www.indiamart.com/proddetail/brown-paddy-rice-2852885838397.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Wheat seed</h3>
+        <div class="card-content">
+		 <img src="https://i0.wp.com/youmeandtrends.com/wp-content/uploads/2017/01/Wheat-producing-states-of-India-Most-wheat-producing-states-in-India.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>Wheat, any of several species of cereal grasses of the genus Triticum and their edible grains.It is used to make bread, pasta, cake, crackers, cookies, pastries, flour, and many other foodstuffs.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="https://www.indiamart.com/proddetail/lokwan-wheat-2851314696588.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Corn seed</h3>
+        <div class="card-content">
+		 <img src="https://tse4.mm.bing.net/th?id=OIP.GJXOmgAMA4U4_fKSDnWETQHaE7&pid=Api&P=0&h=180" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>Corn is used as livestock feed, as human food, as biofuel, and as raw material in industry. Corn was first domesticated by native peoples in southern Mexico about 10,000 years ago.</p><br>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="https://www.indiamart.com/proddetail/yellow-maize-2850388272230.html" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Peanut seed</h3>
+        <div class="card-content">
+		 <img src="https://tse4.mm.bing.net/th?id=OIP.q3dbj3AW4za6XhwLGnomUQHaFj&pid=Api&P=0&h=180" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>The peanut is used extensively as feed for livestock in some places; the tops of the plants, after the pods are removed,although the entire plant may be so used.</p>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="https://www.indiamart.com/proddetail/organic-groundnut-seeds-2851240341533.html?pos=3" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+	<br>
+	<br>
+	<li class="card">
+      <div>
+        <h3 class="card-title" align="center">Sorghum seed</h3>
+        <div class="card-content">
+		 <img src="https://cdn9.dissolve.com/p/D869_14_307/D869_14_307_1200.jpg" alt="Denim Jeans" style="width:120%">
+        <br> <br> <p>Grain sorghum is a grass that’s used to feed livestock and is made into flour for the food we eat. Red, orange, and bronze sorghum is versatile enough to be used for everything from animal feed to fuel.</p>
+        </div>
+      </div>
+      <div class="card-link-wrapper">
+        <a href="https://www.indiamart.com/proddetail/red-solam-sorghum-2852650353930.html?pos=5" class="card-link"><button>Visit</button></a>
+      </div>
+    </li>
+    <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Cotton seed</h3>
+          <div class="card-content">
+           <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUXGBoaGBgXFx0YHRoaGhgYGyAbGx4dICggGhslHxgdITEhJSkrLi4uHx8zODMsNygtLisBCgoKDg0OGxAQGy0mICUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS03Lf/AABEIAN8A4wMBIgACEQEDEQH/xAAbAAADAAMBAQAAAAAAAAAAAAAEBQYCAwcAAf/EADkQAAECBAQEAwgBBAICAwAAAAECEQADBCEFEjFBBlFhcRMigTKRobHB0eHwFAcjQvEVUhYzc5LS/8QAGAEBAQEBAQAAAAAAAAAAAAAAAgMBAAT/xAAiEQACAgIDAQEAAwEAAAAAAAAAAQIREiEDMUFRIhNhcTL/2gAMAwEAAhEDEQA/AOkSK5ADqbTeJbiPHEZVDMCWISAR9YosWmUoAlrAN9tQ29rxPYnw1K3SFyzoCHZ4SmuomS45ds45isxBXdIcC7+msdI/p/w6tcpOgT1+ka6jgSmWsKCSCNnsejR0vC6XwpSUISwA3hRdgkgaXwtJCWu/OENTwkk1EoK80q5UDa9gNP28WE6aWbflzifqsSKQFNe0c6RqKulkJSAANBGbtCCkx8XB1HuhrT1KfaJEHJNirQUqEmO4oiUjz/5Fh1Jg/wDk5yydOYjZOwuWq6kAnqHa20J6RiVkGmtQTYh+h5w9UZplhMssd1GAcaoZFKsTQgefyv26bRh/NKg4LbgfWIStRGksgrD0TEzGnXcWVsYj/wCpPDHirRMlJGYXUS522A3i9kVOeWAq/LnDJYlSpYWoXZ3Nzp+I7jVKxSdnNeE8LVLUQp+xcs994rq2QQm3KDcPnipSZglhKXISpwcwBZ7aX5xqq8yTliko2BOnsn6umQlBzJFgdv20K8HqPNlFhcl9BFFWUecF7WaJ1OFrQTlzZXu+rdOkGMaRrlZYUlSCmxcaW3gujKQWYRF1WPfw0IHhlWY9hyHqSQPjFJKxQKRmYoIDqSbkb6jWBKZSMAxcmSmb4i25AdX1gyRPzk2BTs0QdRUKVnnrsAfKS5LNsNB3jRgHEC0zAhCrKUHdi19X6PE48rfg3FLZSVuHecLBYAm436QtnTFiaMrEGxBPxEVlLhjuVFwbwDX4KkLCwCySCfr6RT+PQMvQrC5acuY9r9IbG46QAQGA5tDBKWHpFksSTeWyRxfCkoUZiSEk390D080z1S/DV5kmxGjNd/fFPitNnS2+0TODUaqWeAQMit+t7H1OsDkibCWysl4QhhmcncvHo+jE08x749G2h0xEKCmEzP4aBOU5UrKMxLAXLXcW9BHzG6gBIlpN92iekYmr2pXnJPtPb06Qnr8MrZihOStJL3R67HtbSNjiv9JSlJ68LeikXzPe1xFFLsAHiKn1OaW0wKQQPZ694a8N4wJiAlSiVC19YxTp4nY2rHSpouzEjT8/CEmKSnIfQ/m0NK+eJRKjYAOrSJ/EqojKWcKL22HSN/kvs5wa6KDD8Kl5XZ3hbiPDvtFK1ZVapJt+IZYdXpCQHYtoTG9dSPZsd7QJuLKQTRq4dpwiULuz/P8AENp9R/juQ/eAsKUGUBo8bpzBVztaG+grYr4jo/EQD/1vCvBMMK2UAyecO8TWPDUHLj9EbcPGSWgM1g/do5LdmOgc0XgkEHMN+kE4gkTJbDl6QQqYG/TAdJMGZSerj8QsU9BtrYPgsnwZaZdrZtA27wuVXLVNJJGUKIb3fH7GGmK1Ily1F7gHL1PKJaR5GLglRKiSOfKJ81pJIpwtW3IZV9RkKi7AbPAya9bAliH+EBYn5zsQbEG7gwB/yMu6V+yC3qks47N8I4I3m4TKmzBOmB2AASdA27c9obUlAjwsqLDdum0RE7H0kpRJWVAO6tgXs5i1wULQnNMNiNBG4xFckwev4dE6XlcjVgebWNjaJiqwhVMAoJLJYqZNySwZ3vFrOx9AUUIAKnY336wfRpCgoqSMx1u9hpBqEtI79LbBuHqsqkpvdmIOoI5jYxvyqVrY7h9tPdCnDZi0TpqLAZnfVtvo/rDyRLdZL/m0Y1bSFHSsXTvIQDZyw+cNELLDnCjiemKkpWH8insW6X6QykTBkSomLf0TClIcPCHiWSqZKyJZKuf0iglTUkWMA1aUZhnUAOsdJ/kyPZzh1p8qirMLGPR0k/x/+gPWPRD8/S/6+HP5FMZSEISyU/KKGgQtICWtlcPvoDEHhnGsqevw5iFIIIHnsC8dPwaUFgLI0FvXX5RseNt2SzVJA82QJsvzpy/G8c8xtdVQTxNlS/EQ5KlBmbe1iI62qW6WO8IcawfxJS0A3IIuHFx8oq0BEGv+qMibLAmDMVEAhrDYu+oJhhJxeqnrCk0iwhrZmS4OhHuhdwLwlTy5qjMymYknK1hlBLEjm28dUTISoeWxFrh4OJrkc8xPFTLU38ea4ActYdXEfcP4mlrWEoWVLLDLvfZosqmkUVMeTaRnhPDcmXME8oT4rasA35g/xRTF/I2fMOrVy/8A2Jyvf9aGP8xCg4UH/TH3EqZExOVW76RybG62oplqSC6Mx7M5G2/Q9Yb+GIsccxUeUA6rB1beKuWsBAv+tHLOHEipS6lPY9G205xcYZWpR/bWoOACCTqPXe0CE1k0bOLxsKm1KgCzdfftGUuoT7X/AFFj6QBjONSUh8wte0RlRxSKhX8WQCM3tqNmvcDqRDSxdgvJDrFcQlzJtyGzC2rnWCDKKyCgWFhaA6XCZcn+42ZQYPqejwzpKqZm6OwDXbmeTfaIz5lkWjxOjJGAk6EgmNU/gxKkpK9UizWY/aKGhqdnBfTbrd9bQwnsUxeElIjNOJG4ZhEpJskOLWA5xRVdKVIyi1mcbaRNYhiqJExlWc8rAOBFBMxIKQcp21+kZ+aaFvQAnDUpKUslxcvvzI6b+kBVuI+DKIK7+Yu27k/IwdUT0qASggzFD1YjXtGNRwyFAlV3vu4/WgQi+0bKS6JDBOIyKwhaVeGsMFHQkfO2kdSppgZwXGoiJrMMlqIQxBSQQdwRvC/AOL1icumyFQl6rcNzv0/IjotXs2UWtIvautlptMtmcdDCqWslC0p0GkaJk8zmzMEu43Om0FS5+QO4fkbbxz5U3oS4X6Z4PUDzIJ8zOA8KJ0udNmKewSrykPcfSAeJErl1EqdT3ze2l2AaKORicvwytZCFDUaOYN3pnPXQbTy1ZR5fgI9CP/yh7p02j0O4fTLmc1pMElrnITMDgqT8PlHaqWUEISkbACOccNMapKVByHPTvHQ584jKwcbxSelZCG+w5Ey0DVKhdtfvAImF3UW17xqM/wAQ5Ekl/ab96xsXZsnRKzVS5U9Ski6iH5RYYfUhncaQYMPllJCkg9xEhxvhq0SjMpVMpN8jsFdOkd0FbK6TVhR2cR5c+5sT8rbRzvhGuWhKVTSy75k6i+w7Xi3wyYVOseZJFun+4DqTQ08TOorPMGY8+gZ3ia4ow1M6StanBUAMyQ+hcE8xe/R4fVGTxQSdmIZgHMC1M9JBSLjTKbvsW5axm0JbIvhvLIuoulwxDNy+OsVlWZcxGYMzeX6RroeGUqBuyeQs3SM6bhQSgEpWQm5UOnMci/KC+O3fglPFUTWJIzS1BO+lnbtEvg+FrkTfEWolDkvlIUHO73I07NHcaQSmCEpAAGjfHvC3EaqQFmWsJza3EUqKiTTbYgkz5a5QyKzWsXDQvqcNnH/1zWJsSdgBte7kbwPi/C6UTFzJS8iVB7OwLNYaae5vSNnCvD9WQBNqM0s6K3Kfk8QfBbtMsuZrTKTAJhSgEkKX2I1sWG0U3iHLmVbnC/DqeWhQQ+m+539BGjHsQlhpbkixISH3s8WisUSltm6ppUTQcyBzHNhv0iU/iT8wkSlMFE9Mo7vp0h3LxMLUBmITy0+UM6SXLlKJJBUs+Uk68gIKjkPKjZg2Ey6ZD/5H2lG5J+g6QYurPpHxZc67/KNc8pRycxZIiwXGpKSgqAZQEcywBaJZqp6F51rXYFmAFh6RacR4ifDVKHtKDAjYHcxzPEMOmUh8RJLFho76nTcRDnhksUX4Z4tNnQ+HakmSZjpudR20t2jOfPzpdbG+n3jllJ/UH+O8qXKdOZRJWwLqJOgsAHg3DuJJ9TUZSUhDCwSQXPflEo8TjGi0+bJ2jpKWzpDBhr36Qdi1MjI7C4jThtKEpHmvq8AcQVgFns20b0tk1t6NFPXAJAIDh/nHyI6r4nQlZHlsY+wMX8KZIIw5SpcxM0Zs/tAq0UDZm2t1iwl4tMWksCGu+3q0E0uES1yZZmBiBt8i0EVNC8vw5LpcuWLfmPVPR5ONX2S9fiE6YpKUK1sSC4PQ67RccP0mRAJ9oi8IpNMEKypSkIdjtez227xTUJeX5dvpGcMrbsXNCqoTcT10xLBDsSAebD/qN4IyBcrKDqN+u/J41Yj5wSPaSHANr9vzvH2inDMkEHUWMb3KwPSNtLwtJDFQJPcwbPwoC6BlsB5S2nSGCjGCpv6YppGdk1iGGzGJRc8jv6wJRyJqCVzkAcmu3SLBc0ZdYRY8lSkFiU+V3ABdu4IgzlQ4RQbKWMrp3jKiqBMC0vcH4QhpKwJG7bO9x94IwytCVLWElyPluOXUR0Y2Cc/BlJo8hcndxtd4W10oZyoNmP8Akb6CC/8AlUzCkOx5bdoDmAf9vrCwTVBUqdgeJBpCrvbl66Rr/prP8SncEsFqHmsXBvrGnFcSPhkS0kqNmHz+sLeCp8ylSmXMBGZRIJ08xNr6WAt+IyMa0KUstlxUyFEuSzfGJ+opCpRzFknlqf3neKNFdmtlPSFOKIWqwFt/3eMcUkdk2SuJ4gozU08pnVYX+NtGEU1GpchI8VedmGl+3OIanwlcrFJM7M8tebNqpjlIDWsDbpHTJiaaXLAmLDu5JO/MxGnf5LJqtmqZjCwfYLDV9Q42gLE5s1SCQQkgbn7Q0kYhIULrSbalriFNfXom+SWMwVYnlFqf0laJKlqKqapSykC+h5C2m0LeNlVKZQVlcXFtRHSMPwYJDwBPkeIspUAQnbnaDi12Jyvo4pgGCfyDmJUlIGvtuexEXdLw+fDTMlapNiRex1Lh2sIpJeAgrSmUAA9wzBvTRosqHBEIsb94OLcv6EpKv7OfT11Ph3Ucwd8uh6d4ma+RVz0+GtRcO+UsPfZ47bV0SSGyp9RCaspgAdNWBaG+P2zFI43T8BqKQVG+7gE67x6OxycOUUglh6R6BT+m5BtEoGXfl6frQsrq9BuksGfOAb3sBziUkcWGx0sPV7Rh/wAuZyQuXcEkXFwzj5wppXoMJOhhWVkwyypSmD2BNw+3ezuIbcIV03K6gQk8/S/1jmxNQqploVMKk5nIcW5DpHSpjoSkpYWuOY5CPPPkXFT+lowfJoo5SEgEkhj0AiUxSrzKHhkEpU/oH5bxsrELWoJS6goMwb17Q5wnBRLQApjbTUDtHqg8lo8sk0wvD8VlzUulV9wdQesZrRdj+6n3R9UJYsAOwEa1ICiBlPfT3EQ6XplsCr6vKpvaYdrQKU1E0NYJ5BoQ8VU02UrNLmqIe4fQW6sPSHXC1QVJBNzofSOSVmNuh3Lo/KARoGjCdh4IYW5MG/RBDgsyiDy5/eNKa4Zsp/ekNGMT1dPkOg78usLZk+ydyToPXtfv1ijqJwWco+UYS8OQAzDv3jnoCTYupqdIHUu5N9YxnBJUkBvaHWCa2jyDMguG0t31hHLqEpm5lKYaa23gtm1su6eQAlvlAeIywGJ/ecbqTEEFPtD3/rxP8a44inlGYtQGw7nQd4DfhetDDAqNKgVlKXcgFr2JGsM5lHLzXCXI0IES39PcV8WmBzOSSf8A7HNptYxTTAc2c7WbXXcQm6WgIkuK8BlqCiAEqIcEWvGjASEoAIylA6X/ADFRWSPEVtlbT79Ig1zDOqJtPLCyUqZSgCwzdWbeJy6tDXezoNCvyBmJ/bQsnIAU9xG6RTz5UoEJciwA1I5wlq11a5iWkKtrp35xt2kmdW9FHhdJfNoNocFxcm0IqWqngOuWUjb9EFIrwzKO3xjpJM5Wb11bKY9R8Hc7QDOkheh90BIrHWQm42JOnppDrC0ABzc7doxOx0EyKJkhzePQR4sfIzRtM5Zi2Cy1JK2GYCx0ZtrRLU61y17gE3YWIe3R4Y8QzaqmWlM28tR9oBy/I27XgtKDPCUAFNxezsxc9Nox70BCLGZ5sqSk5tS+2XbvFRwtiXj00vPdTlN7MRYgv6w+w7h6UEh0kt7+8bjg8uWlkWZQOm8Hk4HKFIXHyYytmWHVIRM8MDk7dRr8PjFAqoSAQo3iXraFBWJgUUrAZ/UfaMKLEZypwlqSk630LBuWuvSKRi4pID5LbKBNZLAzJ0uDztGqqrXR5VNoXb1jy8PFywuOX68Cz0pAD+4aD8GOal0zM4ibiJYEk51BOjZrufTf7wVwFJaWSlikk3d3L3flfaEXF0/xsklIPnJ12sb/ALzhvwnhc6klhKWUkjRzY9PjHKSTOcW0UmLOEhgcz7QjxGsCEjOrU+p6dYLM2pWq8tgDqdxEhxjhtTOnIkosHzA5m21LCwu192aGm3sMkuinw/EQS3o0PKecCGiMw7hmZLBPjkzQkWZx1b1e5HSNdFjZTMMqYfOlWUvb16iBKexwjSHuM1KkkpcZe+33eOe1yp6leS4SRmDFiklnf017d46OiRJmMqYXva5YmGKpUpAYBN22+FoSfhjV7OaSsWWlglCTs2Y7sT8oQcbVlRUSfOwSm4Qm41+Jiv4qTKkrTMQkAK/6gNmbbl/uEYwabWzAhCsiGGcgP6dDE6V2bb6Mv6d474SU5nyq3As/+vlHSjjKJifKvvdv9who+D0yEBIPiHW4bT8RpxPDUkEJ8igNoWXh2PpsxDiiXJdAUS9m/MPeCEAy/EKUha7ki79fhHGDTqmVAlqzsDc7EP8AoMduwUoTKSlJ0ETtoaWxlV1JBKWs1jGEiaMwGhY+7lANUtQUGJ3sDzHLl6wMitKVBSspLDQs2r3MY5Kx0ynlnV9omeLKYFOZByqfmwVHsU4gTJAzXJawc3OnzaC0U/jgZnA5fukNtPSM/wBJTA6OYqYTMshJci4c7W5bxcUpBT5do1jDUhgkAg+0VG/fqbbtB6iLNAS2LoUTq+YkkeW0eg9dECXyx9jKkbcSG4rWk+3ptv8ApgbhGnE1lS8yUDUK6N94Dqaz+QtaCDew7gRW8MyZVPLytlFtOnyiyZBr6NkLAToWf5Rkk7gi8aZy/EtoOX3jFbI3ikFe2ZOXiEmKTTcaE6nS3MctYaYBQJsoB2DBT6/towqpKVMVat8OsfcOqhIGX3A2tyh0eco1oDQuq0IDuLtrGuoxRAZRUzjTnEhxdiU7w1GURz3PygZUNxvoGof79XNKFJCUBKRZzrduWgi4oZWVrv0O0cn/AKYyiuoURMUSS6hkKQ5Y3vfTf4MX6lWyGIJUSzEfvKIuO8yudLEOxKuCU2vfQRM8X4sJSEKbzLsnq+v2aBcRrBOnolgjMCCMpOg1dvSx5xr4tkpWJSCbJDq9WAI6+kYpOUn8MdRQ54YL0+dZOZQ1Jd78vdaOZYtInzMSKX8oIu98pNov8OniVKH+TWEB4LSidWKnKskABI7b9IdJdG532OKXDVIS6QShIYAn3m+/L1jORP8ADS80h/p1gujxJJmTJCWKk69jcdLxOcQgS1KUpZId0jQDm7a9+0Ri/UeiUa7FfG9cFU68ifOop8MPu9zfRg8UOHzCinl5EpfKl+7AHa/OOVVmNmoqlMTlR7AGhADG3dx6R03hmsKpYCnGUdvUdYU4ZRonCVOxvTV5Yuklyz7Cz+u1xC6ViCZxyLlkciNQ7+v+4Kqalzp5Rvp6DeNNIqXmGiVPfS4Fw/2jzNTVKJ6FKL7FRwkSapJsUL0LXe9j2t7op51Agos4LO4LEb7dolcTxCTIWFqn3K3yl/8AL36aw/w/FZKwZiV66l7PaPVBuUdrZ55RUZaehPW1E0EBCtGOhJZ94R43PWSAMylFTBIBLtfQMAO8MMV4ikieEIAWpZZ3LORZ9hrFHwthwABUkZicxUbm40H4joce9mT5NaFuHcPTQULWEbOSx9BZzfdxFdLcBk/ukHrpwwA2jQuRl0t6RZRSJ22AVMw/9iPezQXRIJ1+8fFJexN+0ZyXTu42gOOyqegCtwBalqUmsnywS+VJDDmzgnW7R6HWaPRlI3ORx3huiqpy/OlKUEBlf5M7lxt74sJ2ETAGdwflyg3BEiXLBY2F/wAw3VUobZ+UdjD0ncvCGk4dUoU2Y5XO509+sOlUhy6k8+b+kO0KSoaWOkZTaAMG9YtFKiUrJupmgEAkgA6j6xjTyTNIYukav3I+kfeJaCakZ5YdIurn/uC+HZiUSEk2e6n9fhBbp7NUUwHFMDlpSZhBIY7/AC3iUxmUfAPhKUk5tCT6t6Ra8S1YSL+yeraB7naIzBwqpn+E4ynVgWJbQOLgA6x527novSUTP+j+eSKgLBZS3SWPLmep+EWOOla05XZDeYgsp/lDeThUuVKTLQkJYbdNzE1X080ZnIEtwAQdjqT+IpPWia3s0SMNRIQVStdy7k9ybnXUxPfyjKmZphmrQR/1Kgljr2joNNg6Uy2Kn39bQnxCnlSgokgjcG4sDGShVV0dGS3fYLheJypktwLAtlZr6H9ENpGBLWc+Yy9w3WBuC0SlOQlLi4+If6xXzLhoS+HJLsTTMLCDnC/MXF4g+O8PnokLWlfUqdyNLMbX0eOh1iMpdyR72iO43JMiYMxZSRbq4/MY0o9IpeXpD/05wrMoqUHN7/vrHWcPoEhLWYRBcCTAhJS3me/Xt2joFHPVl9l4SIhIowoGzDZ94huLJfhETALvcvaKybWKYgghhvoekKcXVmleYA9COUcJfSewzh2nqUoqZqlKOyQbD9aKinShKMglIyh7WDgfEn5xz3hrHlpq5lKo5pYV5Tum4t2d46tQ0CVJzHf4Eb2jyckZ3o9XE41TJkcMyZ0xE2SnKpwCx0A6Fw9tR9Y6LRyMo02gDCpYSwLZhbvDTPePVwp47PPzVno9OmtGnxXjViM9ms8AInKYFrmzCG3QYqw+YkO+8YhQds1+0DSkLUWtbnuY+lKwGsFHlEHO90XUK9Dikx6Bk08wh8594j7AzfwWC+kvw/iIqJSFJJDjv+jWFldQ1SJwXLUsy3S4fZ2OvIXFx8Yj+EcXmAgoICWBUn3+7V46BScUobzt9PjFnxqWzzrkcdFDhUosRmfk9j/qHSdIl5WKSipCkkHbX4CH6KxJ3DnbvFYRrROU7NkxAaJOfLKVzJYsNR6xXE84ieP6xaQFSSMyduf79Y7kjcaZkJVLRgilzpUklRJceYvtbXQxA0WITJVX/auJalAuBdQIGup+VoYYFxZOqELQlKQoW8pdr2+H1gSVh65a84QcxVz5quW7x54xUD0OTlZ2qlmkpSpYuU33YkXhXi6khSSSHFxa9rfWEMjiOZLyylsolgFHrYadYOk0gnrdRcaEfiKy3pEVZun4sm6UOtVrJF3O3TuYkZtFNqFr8UEJBDJuAPjfaOjYdhcuU+RAHNowNOhZJ5391vfDxvTB10QvC1EuRUgZleGp7Ha2nvi+KnLg/iJd0iacwa5b0LPH2pmqUlgtQezpSxYHf5evWJ5KLGkwnFcflSipClAkWZ39I57jlTMmzUqA8j6E23vaKTDsISqeoAuS1lXKQ2p0YxaIwWQhIGRJPb7x0W5j0tEHgOHy0nxBryOzxQUFYsrKVKSDsBsANze9x6QXVYUlyUJylJJbRwYF4cWJ04uPY5m19LOxNiILTbFHSD6anXMSQUv1ax7PGmp4eCgxUQWbse3K8VCyEg7fGE5xEKUyT6sU/OxhNqOjO9nPMQ/p7MkzBOlTGL5hYch5dNCb+toyHFq6N01NwVWA6/bkN9206HWVCVoyi5b6xzb+oGG56dR0WGILgMX5kswjn0cuxlwzx2mrqEiWhQ2OYMwY/wD5jo8uc/pHFeB8JMqeVpmAS7qUzMzHVTPvuX1tpHYKTKEhiC+7treFxrwE3bNOJ1EtnUsAPz39IHwsEzAQPLzteF+LYHTqmApF3HlSTlDb5dH+0MpJCFJ5OALNa3viP7c99FVjjo3TwrxmBFwPTvBM2mVYZrneFfE0uYkFUk+fb4XuGgTB8QUjKZp8yrEAuHO8SzSm00Xxbimh0uvynKGLWcg3j5Gv/k5O6g/W0eilx+k/0c4XgaJScqRlTuzBuveBqyf5dJYSAfORcagHqdNjrFbLkmYWSD1tp8Y113DOcMVOeWUEDa3KPS3R5FFklgMpSpY8NVxqQXs9m9LRS4HX1CFAZszNmcMbfEa7xqkcKqAKUzeuVgG1aw7wZguGGQSFM/PnBr1G/wBD2orZhHKJnHApahmILA307xYU6SpLlu0S3EhTlUXbLc+kByckNRUWSX9N6ZKFzwwfOQFNrdrdH+sXEySlTCwPtGOdcPVhkqVMA8i/N5et4dUGJzZilFSgHDJ0PPTf/cCWxLXYVVzVGrQAnyFg4JFmvpcG+0dDw6WkEFthCGjw9OVDsTq+76wzqa4SiAR7TANsYcXW2CS8Q1lTdeUIJmJCRNN3Cm8t7OWeG8xLBRcB/wB9Ym64ZkrVlDpLNzH+XysRDm9aBE0Y7OZWcXBNh6mA0VxmB3KANXItb8x8xpakSUpfMVCz6x7DOG/7LLd1MoDRiL3aIySk7Kx0j2D4hJl1AGZ1KcqXpq9jFZOmq1Qba2Mc7xCh/iHMfMkm5GxihwTFFBIKknITYmzB42PQihnVTnKpxZx1PT7QBgstSaiYEgZSQrNpqPjDXEiFywpBD7ctdeohOjGpUqaQtQBs5Jtpt0hPujF0OMUWDZwCLknl8vSJCpxgzT/aSrMlWVKxoTpdnt3ijqES59yq25GnK3yhfiE2TTI8nmVtdyOp90TlFsUWkfP+UVLSAu69TlGjmAVyf5SCltSxBHa/Ua2hUmrmqIUUu/L6/GHGFzcodw55WhR5EtHShe0G4Xg8mmQQlIvdRN8yn19/KAMWqZ6g8tJYaNe4+UNaKuE0+GRr6e792hzJpPCRlTfobxvLyKKsPHFyYj4MQZlMFLV/dcuTseQeHJlpljNNU525ADT1gJCXnahIcaWd+Y5QRxCgKkrcPYsew6XicOTJWUlHHQq/8oRNmKloTnI5ixbk+sHYxQLCBNlpDgPl3G7pe3oYn+GMLUJhWRcHUaNb7X+UWmKT0iUT/kzX+sKEbtsxyqkjiNfj8wzFkhQOYggjlbmOUei0VMlOc8p1PcgH7R6I/ktci8p5CESwED3bwgqqvKFKzFIFym+7jlbSHeEVwnS0qSdoBxqkBSWSlze+jx6eSLe0eXjkktiPC8Q8yghyXZyG+l9oxx2qyoTbzG9y1hcmMU1X8eV7OdQBYJ7c4zwDDV1SUzpyTdNrjQl2PW14PHfQuSqtG6nxJSJOcJWQBqAT8omcfqf5MtSU5kpUm5YgkM9gdDtHVKelSlISAAOUA1uFIWCnKItgkRyZybCJICcmWyfK2pDW53ippME8WXoxfykcoDxfBZlPNSxBSpVs1wBcta+/wjo2GyE+Em3+IPwiS4/1bKuf5pELSUtVImJzqKkgjVrDcjcxXVdOiYnMFBiDp+dIxrqlCnQA6h8Yksb/AJDhKFAIfQHro/vtHTlFnR45f4PaGuQsCSpY8QDTcgHVo+VcjvoxO+417HWOf4s8qUZi1KGS4IVvqO9yI38E8UCesS5i5mYg/wDs3L6aN6CNTtAccdlLQ0Spk0FXsI03f66w/nZrpDi3L1j7Tsn7wNjGLokoUvUpBJ5fGOxTjTNU2pWBVtESkImMVKPJw30F2h0KKWJOQpBt74gsOxVc9SakrUJczyhKWNgSAVOH9BcERV0EmZnzKU5TYJ0D87dLct4HE4r8otzQlqcvRJj1KKaU6VKToGCiwcu2sQFTUhc1AScwCvNqXDbPyP7tFzxPhSqpXhgnIlTqY6ltHGw+cMMGwKXJQhkB0pOXm5f6iNoGTYHQ0yQh0oyvdQZrtrHykyEZVpdTqu4DsbBnH6IeVJy+Utppp/oRAcRYbMlEzhPCFKuE53Hq5bfYRCKuRaWolJ4blYUCmxZQLfD5G4gVdQiRJdZ0AYE3012uS8TdBxPMCkSVgJuRn5AJJd9NHhwrhqXVpc1EycVANkYD0yjS29objXYE/hjwJjkyfPdSLebzB7MzDcNcx0GrWrKbHqSbjr+I1cPYEijkhKUuf8m1Pc7wSaxKxy2IOvr2jpRhJ1I5ZJWhTndaSov5kgkHYF3ijnUwUABdLP8ANvnHO+Ja1VGxSM0skM98u4flYQfRcSJ8JlvmLWzM4N7Gz9ozFQVCTydlfTTkSkKWfL5iGO+0BLolTi+YpTya9j8ILwGmSZfjTC5V5g+w2sd4yq6lknw9DvFleINJi4YDI/xKgP8A5CO9trx6BDiE1NlBLjqPvyj0SpCtk2mkqZah4alJA1bQ++GGI4nVTZWV8qgPaAs7atFbVkkEZbbdYUVNObm3ID5xeSfh54/2SdPxAQBJqJYTMZLEE5VEvYE6m2zx0LDawolSgBZTDs/L1jmicO/l1qVE5USnygFiSGHom99HtHRqHypCLlI3MYk60bexuhZJLbWjEBnMZyyG19YWYtiiUJcluvo/pFVpbA2hDxhiCGS6srLT6EKGneKDDaoTEpCFpuP31iKn4Ma9PiKVllhTjmpjY3Fn/dYPocBVLKRLUU5XZjfsdiInJZaFF47KWtQlI0I11u767wjqpouQylbJ2fry3jYiTPCyF3B2G2l/S4jaKcJa1t/lCXGkugS5JNkDjGHLqEr8Rgdg2bL1a0cxlVi5EwlBIKSWfn1D3jvFVS5Vki4I7/COR8d4aETipKWzFyGZzbS7kvt+nGKD+lRwz/UOZNdEyUVKAd0lh3L6QSqccS8mceEDdCD5uy7PtERwLNyVQSdFpI9bH6GOm8O1CUzFJ8MJUbu3tAbloDY6SYInEFYdTCXJAUkKPtXUlztY+7aDsD41ROWmVLlTVLUS5KfKjmpSnaDcSw8VGcJLElgQbEDnexB+sbOEcITIzAkZidewAtvs8CDcmKdJUPJkhKEAAWLkneEtVXT1TEoQhnLvyF/f9YopvskMFA8/3nC3DpqTNZTAC459m+kY9umNaWjTX060oYOokMTuevuhJM4eTMmFc8uCAAgq9k3Ft/dFFj0+YQclrW0a7M+5PaEuD0M9R/uB038yrN6bl9+npHJ/DpQ+nl4DLCP7aXcMGufQ6390NMGwSZTl0g9XPr+6w2wPDFIfMrNsC2kNapBys5DxZK9sl/zpGmnqnT5wArlE7jEgLcAMu5SXs9te8PpFKpWthz59oxraHMGQUu2p2jJxUkKDaZHVVGupSJKkEk6uLBjZz8bbRrlcDoAYzFlgAws2g940eKnBlmWChYAUNTz5MWhrJZ77jWJ4+DyOd1surpUZJc8ql5h7aAopHJJs3xvFJgOBTBKSZ05alKYqLsL7ADQRsxKWLoW5SojYaONIoZU1BQkpLpa2W4/RHRV9nNrwHRh0kBjLBbc3+d49Hpk25uPd+I+w9GGFTMsw253icxrEAhCi7va37YQDScS/y0EyUsxbzavy5b8zGpdCrIols/vEUy8RBo1cFLClrKkkKcj3E39bW7Rdy5YAYtElw/SZTZrWL6k3MVSZKlJcsO0c16ZHsHqCUgsfjEHxVPWpQQ7bZfg/WHnEeKKkJJILMySG7X3iPoZ0yaVTJoc5mHTnEpT1RSMFdlphM4pkoSHICUhSm9/raAJs6amqPhqaWA6iSWbTTq/3hhw6sMoHfS37zhbxFigkAKHmUpaUEM1iW15Xjzzbi0ysFeigkLmrZ2ve3P7F4yVPT5gVgqTYpSXI9NYF4frM+WWoZSkDTk35EH/wpZmlWUZjZRbVnb5/GPS+R4qiceJNtsS1OJLDZZVjz19eX+4zqsOlVEu6QFN0d2sfrDmolIS4SkuIAE3VtTqeotGLKL7Oli10cbxPBRTVUoCwCw6idXtaw689YsKiUfEQuXZSHJvsG2ie/qpJPiBY09zOTpvDfgbFEzpAK7qQQlR5k7+sJqwJ0htQ1ilKeWopzO6SLAt7wDDaRQOhagfMQ5SNRzaBJkqWhQYWVYg94OqK9ElG+hboz8okotOxOSkqJWZxfMopnhTk5kuwPy/MNJWLrnKE1AZL9wbwgqMFOJ1EuYFjw05SbMSHv2NjHRpktCAEABm5Q26Wzqt6GOFyBMSFqSA5cvuY1Yk4RmQHN9u4G9obYetKpYy2t8YGr0JQL83+PyjmlWhJsMwxB8JOoLB4JmotA9JVJUAxt2jfNWFC0XSoi2aqc2INh9IFnqEoF1al+doTrqiieJZUXUGLe94Or6UqB3H+rjkYjJ3sqnSoV4opwFJ9pwoEuLA/jeGEurCkC4u3d/vCg0q1LWkqfMdxoGe1+Q+Jhbw2vw5/grPlc5GJ2YX7s/rGbOspqxKV2yuAB2/bRNYdiv8ADq1SCVKlzLgahB+xcH39YsqvLlYWI9f3nExQYIFzFl/KSWfUQlGzHKkO14rIff3R6B/+AlDWPQ6YT//Z" alt="Denim Jeans" style="width:120%">
+          <br> <br> <p>Look for cotton seeds that are pure, viable, disease-free, and approved by a reputable agency.</p>
+          </div>
+        </div>
+        <br>
+        
+        <div class="card-link-wrapper">
+          <a href="https://www.indiamart.com/proddetail/ajeet-155-cotton-seeds-bg-ii-2851299490197.html" class="card-link"><button>Buy now</button></a>
+        </div>
+      </li>
+      <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Tomato seed</h3>
+          <div class="card-content">
+           <img src="https://www.urbanorganicgardener.com/wp-content/uploads/2020/10/Untitled-design-2.jpg" alt="Denim Jeans" style="width:120%">
+          <br> <br> <p>Tomatoes are used in the preparations of a variety of soups, and salads. Many industrial products like tomato sauce and chutneys are made from them.</p>
+          </div>
+        </div>
+        
+        <div class="card-link-wrapper">
+          <a href="https://www.indiamart.com/proddetail/tomato-seed-oil-2849611457162.html" class="card-link"><button>Buy now</button></a>
+        </div>
+      </li>
+      <li class="card">
+        <div>
+          <h3 class="card-title" align="center">Chilli seed</h3>
+          <div class="card-content">
+           <img src="https://tse2.mm.bing.net/th?id=OIP.6Z9XgiKqVztRXBHzGmxBFQHaE7&pid=Api&P=0&h=180" alt="Denim Jeans" style="width:120%">
+          <br> <br> <p>A chilli seed is the reproductive part of a chilli plant, which can be planted to grow a new chilli plant. Chilli seeds are typically found inside the fruit of the chilli plant, which is also known as the chilli pepper</p>
+          </div>
+        </div>
+        <br>
+        <div class="card-link-wrapper">
+          <a href="https://www.indiamart.com/proddetail/sarpan-avinash-chilli-seeds-2852866654112.html?pos=1&kwd=chilli%20seeds&tags=A||||7867.1333|Price|product|||TS|type=attr=1|attrS" class="card-link"><button>Buy now</button></a>
+        </div>
+      </li>
+
+	
+</body>
+</html>
